@@ -1,0 +1,16 @@
+<input type="number" [(ngModel)]="valor" placeholder="Digite o valor desejado: ">
+<div [ngSwitch]="valor">
+  <p *ngSwitchCase="1">Um</p>
+  <p *ngSwitchCase="2">Dois</p>
+  <p *ngSwitchDefault>Valor não reconhecido</p>
+</div>
+
+<input type="text" [(ngModel)]="resposta" placeholder='Digite "sim", "não" ou "talvez"'>
+<div [ngSwitch]="resposta.toLowerCase()">
+  <p *ngSwitchCase="'sim'">Você respondeu SIM</p>
+  <p *ngSwitchCase="'não'">Você respondeu NÃO</p>
+  <p *ngSwitchCase="'talvez'">Você respondeu TALVEZ</p>
+  <p *ngSwitchDefault>Resposta não reconhecida</p>
+</div>
+
+<hr>

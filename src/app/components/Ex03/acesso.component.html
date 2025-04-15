@@ -1,0 +1,11 @@
+<input type="number" [(ngModel)]="idade" placeholder="Digite sua idade: ">
+
+@if (idade == null || idade == undefined) {
+  <p id="pendente">Acesso pendente, digite sua idade</p>
+} @else if (idade >= 18) {
+  <p id="permitido">Acesso permitido</p>
+}@else{
+  <p id="negado">Acesso negado</p>
+}
+
+

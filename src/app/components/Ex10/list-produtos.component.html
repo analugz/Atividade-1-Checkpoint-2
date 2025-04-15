@@ -1,0 +1,14 @@
+<h4>Exercício 10 - Lista de Produtos com Condicional</h4>
+
+<ul *ngIf="listaProdutos.length > 0; else semProdutos">
+  <li *ngFor="let produto of listaProdutos; trackBy: trackByNome"
+      [class.promocao]="produto.promocao">
+    Nome: {{ produto.nome }}, Preço: {{ produto.preco }}
+  </li>
+</ul>
+
+<ng-template #semProdutos>
+  <p>Nenhum produto cadastrado</p>
+</ng-template>
+
+<hr>

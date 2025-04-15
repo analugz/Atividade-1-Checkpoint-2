@@ -1,0 +1,49 @@
+<h4>Selecione o mês de seu nascimento: </h4>
+
+<!-- Switch Angular 17 -->
+<!--ngModel - two-way data binding — ou seja, ele conecta um valor do componente com o valor exibido em um input (e vice-versa) -->
+<input type="number" [(ngModel)]="mes" placeholder="Digite o número do mês" />
+
+@switch (mes) {
+  @case (1) {
+    <p>Janeiro</p>
+  }
+  @case (2) {
+    <p>Fevereiro</p>
+  }
+  @case (3) {
+    <p>Março</p>
+  }
+  @case (4) {
+    <p>Abril</p>
+  }
+  @case (5) {
+    <p>Maio</p>
+  }
+  @case (6) {
+    <p>Junho</p>
+  }
+  @case (7) {
+    <p>Julho</p>
+  }
+  @case (8) {
+    <p>Agosto</p>
+  }
+  @case (9) {
+    <p>Setembro</p>
+  }
+  @case (10) {
+    <p>Outubro</p>
+  }
+  @case (11) {
+    <p>Novembro</p>
+  }
+  @case (12) {
+    <p>Dezembro</p>
+  }
+  @default {
+    <p>Mês inválido!</p>
+  }
+}
+
+<hr>
